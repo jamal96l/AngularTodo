@@ -60,6 +60,8 @@ export class AppComponent {
           if (response._id!=null){
             this.todoToFind = response;
             console.log(this.todoToFind);
+          }else {
+            window.alert("Activity not found");
           }
         }
       },
