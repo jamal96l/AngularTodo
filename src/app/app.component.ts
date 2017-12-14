@@ -21,7 +21,7 @@ export class AppComponent {
 
   constructor(private http: Http) {
     this.newTodo = new Todo('', '', false, this.fecha);
-    this.todoToFind = new Todo('', '', null, this.fecha);
+    this.todoToFind = new Todo('', '', null, null);
     console.log('Todo list');
     this.getData();
   }
@@ -54,14 +54,14 @@ export class AppComponent {
     this.getTodo(this.idToFInd).subscribe(
       response => {
         if (!response) {
-          this.todoToFind = new Todo('', '', null, this.fecha);
+          this.todoToFind = new Todo('', '', null, null);
           console.log("No existe");
         } else {
           if (response._id!=null){
             this.todoToFind = response;
             console.log(this.todoToFind);
           }else {
-            this.todoToFind = new Todo('', '', null, this.fecha);
+            this.todoToFind = new Todo('', '', null, null);
             console.log("No existe");
           }
         }

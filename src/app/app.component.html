@@ -56,7 +56,7 @@
         <td>{{todoToFind.created_Date}}</td>
         <td>
             <ng-template [ngIf]="todoToFind.completed">Completed</ng-template>
-            <ng-template [ngIf]="!todoToFind.completed">In progress</ng-template>
+            <ng-template [ngIf]="todoToFind.completed==false">In progress</ng-template>
         </td>
       </tr>
     </tbody>
